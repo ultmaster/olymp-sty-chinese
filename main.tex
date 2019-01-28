@@ -1,0 +1,50 @@
+\documentclass[11pt,a4paper,chinese]{ctexart}
+
+\usepackage{ctex}
+\usepackage{array,lastpage,amsmath,amssymb,mathtools,enumitem,graphicx,multirow,tocbibind,longtable,makecell,varwidth,titlesec,bm,booktabs,comment,qtree,listings,tikz,flowchart,algorithm,algorithmic}
+\usepackage{olymp}
+\usepackage{fancyhdr}
+ 
+\setCJKmainfont[BoldFont=Heiti SC Medium]{Songti SC Light}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\sffamily\normalsize 20yy/mm/dd}
+\lhead{\sffamily \normalsize 测试赛}
+\renewcommand{\headrulewidth}{.7pt}
+\renewcommand{\footrulewidth}{.7pt}
+\setlength{\headsep}{15pt}
+\cfoot{\sffamily \normalsize Page \thepage \ of \pageref{LastPage}}
+
+\usepackage{varwidth}
+\newenvironment{centerverbatim}{%
+  \par
+  \centering
+  \varwidth{\linewidth}%
+  \verbatim
+}{%
+  \endverbatim
+  \endvarwidth
+  \par
+}
+
+\usepackage[thinlines]{easytable}
+\lstset{escapeinside=``, breaklines=true, frame=none, extendedchars=false, basicstyle=\ttfamily, showstringspaces=false}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{2.0ex}
+\linespread{1.15}
+\newcommand*{\mat}[1]{\boldsymbol{\mathrm{#1}}}
+\renewcommand*{\vec}[1]{\boldsymbol{\mathrm{#1}}}
+\usepackage{tikz,flowchart}
+\usetikzlibrary{shapes,shapes.geometric,arrows,automata,positioning}
+\usepackage{pgfplots}
+
+\begin{document}
+
+\input problems/cover.tex
+\input problems/kmeans.tex
+\input problems/board.tex
+\input problems/matrix.tex
+\input problems/suffix.tex
+
+\end{document}
